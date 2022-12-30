@@ -4,10 +4,12 @@
   box-sizing: border-box;
 }
 .container {
-  max-width: 1110px;
+  max-width: 80%;
   margin: 0 auto;
 }
-
+html {
+  overflow-x: hidden;
+}
 /* ******************************HEADER*********************** */
 .header {
   min-height: 779px;
@@ -32,7 +34,7 @@
 .header__button {
   position: absolute;
   min-width: 270px;
-  height: 69.76px;
+  height: 69px;
   top: 427.71px;
   background: #005fa3;
   font-family: 'Roboto', sans-serif;
@@ -48,36 +50,52 @@
     max-width: 80%;
   }
   .header {
-    min-width: 1200px;
+    max-width: 1200px;
   }
 }
 @media screen and (max-width: 992px) {
   .header {
-    min-width: 992px;
+    max-width: 992px;
   }
 
-  .header__block {
-    display: flex;
-    justify-content: center;
+  .header__title {
     text-align: center;
+    max-width: 50%;
+    font-size: 38px;
+  }
+  .header__button {
+    left: 10%;
   }
 }
 @media screen and (max-width: 768px) {
   .header {
-    min-width: 768px;
+    max-width: 768px;
+  }
+  .header__title {
+    max-width: 35%;
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 480px) {
+  .header .container {
+    max-width: 90%;
+  }
   .header {
-    min-width: 480px;
+    max-width: 480px;
   }
   .header__title {
-    font-size: 38px;
+    font-size: 22px;
+    max-width: 11%;
+    line-height: 50px;
+  }
+  .header__button {
+    min-width: 174px;
+    left: auto;
   }
 }
 @media screen and (max-width: 320px) {
   .header {
-    min-width: 320px;
+    max-width: 320px;
   }
 }
 /* *********************************************************** */ /* ************************SERVICES SECTION****************** */
@@ -98,7 +116,7 @@
   padding-bottom: 40px;
 }
 .services__title {
-  min-width: 663px;
+  min-width: 50%;
   height: 47px;
   font-family: 'Merriweather';
   font-weight: 900;
@@ -114,7 +132,7 @@
   row-gap: 30px;
 }
 .services__img {
-  min-width: 350px;
+  min-width: 50%;
   height: 360px;
 }
 figure {
@@ -136,36 +154,53 @@ figure {
 @media screen and (max-width: 1200px) {
   .services {
     margin-bottom: 145px;
-    min-width: 1200px;
+    max-width: 1200px;
   }
   .services__images__block {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
   }
   .services__img {
-    width: auto;
+    width: 290px;
   }
 }
 @media screen and (max-width: 992px) {
   .services {
-    min-width: 992px;
+    max-width: 992px;
   }
 }
 @media screen and (max-width: 768px) {
   .services {
-    min-width: 768px;
+    max-width: 768px;
+  }
+  .services__images__block {
+    grid-template-columns: 1fr;
+    justify-items: normal;
+  }
+  .services__title {
+    font-size: 38px;
+    line-height: 55px;
+  }
+  .services__img {
+    width: 100%;
+    height: 100%;
   }
 }
 @media screen and (max-width: 480px) {
   .services {
-    min-width: 480px;
+    max-width: 480px;
   }
   .services__title {
-    font-size: 28px;
+    font-size: 25px;
+  }
+  .services__img {
+    width: 100%;
+    height: 100%;
   }
 }
 @media screen and (max-width: 320px) {
   .services {
-    min-width: 320px;
+    max-width: 320px;
   }
 }
 
@@ -263,7 +298,7 @@ figure {
 }
 @media screen and (max-width: 1200px) {
   .about {
-    min-width: 1200px;
+    max-width: 1200px;
     margin-bottom: 145px;
   }
   .about__blocks {
@@ -300,32 +335,55 @@ figure {
 }
 @media screen and (max-width: 992px) {
   .about {
-    min-width: 992px;
+    max-width: 992px;
   }
 }
 @media screen and (max-width: 768px) {
   .about {
-    min-width: 768px;
+    max-width: 768px;
+  }
+  .about__texts {
+    max-width: 99%;
+    margin-bottom: 60px;
+  }
+  .about__text {
+    max-width: 100%;
+  }
+  .about__items {
+    max-width: 99%;
+  }
+  .about__item {
+    max-width: 400px;
   }
 }
 @media screen and (max-width: 480px) {
   .about {
-    min-width: 480px;
-    padding: 0 0 0 80px;
+    max-width: 480px;
   }
   .about__text {
-    max-width: 400px;
+    max-width: 100%;
     width: 400px;
-    margin-bottom: 40px;
+    margin-bottom: 140px;
   }
   .about__item {
-    max-width: 400px;
-    width: 400px;
+    max-width: 265px;
+  }
+  .about__title {
+    font-size: 35px;
+  }
+  .about__item_title {
+    font-size: 46px;
+  }
+  .about__item_text {
+    font-size: 12px;
+  }
+  .about__item_link {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 320px) {
   .about {
-    min-width: 320px;
+    max-width: 320px;
   }
 }
 
@@ -422,7 +480,7 @@ figure {
 }
 .info__firstname_line,
 .info__lastname_line {
-  width: 255px;
+  min-width: 255px;
   border-bottom: 1px solid white;
   margin-bottom: 35px;
 }
@@ -451,7 +509,7 @@ figure {
   margin-bottom: 84px;
 }
 .info__message_line {
-  width: 540px;
+  min-width: 540px;
   border-bottom: 1px solid white;
   margin-bottom: 50px;
 }
@@ -473,7 +531,7 @@ figure {
 }
 @media screen and (max-width: 1200px) {
   .contact {
-    min-width: 1200px;
+    max-width: 1200px;
   }
   .contact__blocks {
     flex-direction: column;
@@ -511,10 +569,10 @@ figure {
   }
   .info__firstname_line,
   .info__lastname_line {
-    width: 288px;
+    min-width: 288px;
   }
   .info__message_line {
-    width: 610px;
+    min-width: 610px;
   }
   .info__block_button {
     margin-right: 115px;
@@ -522,26 +580,54 @@ figure {
 }
 @media screen and (max-width: 992px) {
   .contact {
-    min-width: 992px;
+    max-width: 992px;
   }
 }
 @media screen and (max-width: 768px) {
   .contact {
-    min-width: 768px;
+    max-width: 768px;
+  }
+  .contact__block {
+    padding: 0;
+  }
+  .contact__support_text {
+    width: 439px;
+  }
+  .contact__support_number {
+    margin: 0;
+    font-size: 16px;
+  }
+  .contact__support_email {
+    font-size: 16px;
+  }
+  .info__block {
+    padding: 0 0 135px 0;
+  }
+  .info__firstname_line,
+  .info__lastname_line {
+    min-width: 182px;
+  }
+  .info__message_line {
+    min-width: 398px;
+  }
+  .info__block_button {
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 480px) {
   .contact {
-    min-width: 480px;
+    max-width: 480px;
   }
   .contact__block {
     padding: 29px 0 0 0;
   }
   .contact__support_title {
-    width: 350px;
+    width: 260px;
+    font-size: 35px;
   }
   .contact__support_text {
-    width: 435px;
+    width: 270px;
+    font-size: 14.5px;
   }
   .contact__support_number {
     margin-left: 0;
@@ -552,19 +638,23 @@ figure {
   }
   .info__firstname_line,
   .info__lastname_line {
-    width: 160px;
+    min-width: 115px;
   }
   .info__message_line {
-    width: 400px;
+    min-width: 273px;
   }
   .info__block_button {
     margin-right: 0;
     justify-content: center;
   }
+  .info__firstname_input,
+  .info__lastname_input {
+    font-size: 17px;
+  }
 }
 @media screen and (max-width: 320px) {
   .contact {
-    min-width: 320px;
+    max-width: 320px;
   }
 }
 
