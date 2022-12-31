@@ -82,11 +82,12 @@ html {
   }
   .header {
     max-width: 480px;
+    min-width: auto;
   }
   .header__title {
     font-size: 22px;
     max-width: 11%;
-    line-height: 50px;
+    line-height: 43px;
   }
   .header__button {
     min-width: 174px;
