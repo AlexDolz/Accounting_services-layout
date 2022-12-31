@@ -673,13 +673,10 @@ figure {
   line-height: 19px;
   color: #000000;
 }
-@media screen and (max-width: 1200px) {
-}
-@media screen and (max-width: 992px) {
-}
-@media screen and (max-width: 768px) {
-}
+
 @media screen and (max-width: 480px) {
-}
-@media screen and (max-width: 320px) {
+  .footer__text {
+    font-size: 10px;
+    line-height: 16px;
+  }
 }
