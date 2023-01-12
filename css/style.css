@@ -2,10 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 .container {
   max-width: 80%;
   margin: 0 auto;
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a:focus,
+a:visited,
+a:active {
+  outline: none;
 }
 html,
 body {
