@@ -79,7 +79,7 @@ body {
     font-size: 38px;
   }
   .header__button {
-    left: 10%;
+    min-width: 307px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -102,6 +102,9 @@ body {
     font-size: 22px;
     max-width: 11%;
     line-height: 43px;
+  }
+  .header__button {
+    min-width: 180px;
   }
 }
 @media screen and (max-width: 320px) {
